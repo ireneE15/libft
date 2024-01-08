@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iescalon <iescalon@student.42urduliz.com>  +#+  +:+       +#+        */
+/*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2023/12/12 09:51:50 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/08 10:54:49 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_isalpha(char c)
 {
@@ -16,4 +18,19 @@ int	ft_isalpha(char c)
 		return (1);
 	else
 		return (0);
+}
+int	main(void)
+{
+	char	chara;
+
+	chara = 'a';
+	if (ft_isalpha(chara))
+	{
+		printf("El carácter '%c' es alfabético\n", chara);
+	}
+	else
+	{
+		printf("El carácter '%c' no es alfabético\n", chara);
+	}
+	return (0);
 }
