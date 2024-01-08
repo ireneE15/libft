@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 10:54:49 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/08 10:56:12 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int	ft_isalpha(char c)
 	else
 		return (0);
 }
+/*
 int	main(void)
 {
 	char	chara;
@@ -34,3 +35,4 @@ int	main(void)
 	}
 	return (0);
 }
+*/
