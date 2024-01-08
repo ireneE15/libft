@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 12:26:19 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/08 14:14:21 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/08 14:20:57 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(char c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	
 }
-/*
-int	main(void)
-{
-	char	chara;
-
-	chara = 'a';
-	if (ft_isalpha(chara))
-	{
-		printf("El carácter '%c' es alfabético\n", chara);
-	}
-	else
-	{
-		printf("El carácter '%c' no es alfabético\n", chara);
-	}
-	return (0);
-}
-*/

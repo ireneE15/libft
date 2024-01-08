@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 12:26:19 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/08 12:15:41 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/08 12:27:04 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(char c)
+char	ft_strlen(char *str)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 /*
 int	main(void)
 {
-	char	chara;
+	char	*string;
+	int		longitud;
 
-	chara = 'a';
-	if (ft_isalpha(chara))
-	{
-		printf("El carácter '%c' es alfabético\n", chara);
-	}
-	else
-	{
-		printf("El carácter '%c' no es alfabético\n", chara);
-	}
+	string = "Hola";
+	longitud = ft_strlen(string);
+	printf("La longitud del string es %i\n", longitud);
 	return (0);
 }
 */

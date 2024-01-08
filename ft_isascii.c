@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 12:26:19 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/08 11:41:19 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/08 12:26:45 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isascii(char c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (c >= 0 && c <= 127)
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
 /*
 int	main(void)
 {
 	char	chara;
 
-	chara = 'a';
-	if (ft_isalpha(chara))
+	chara = '\0';
+	if (ft_isascii(chara))
 	{
-		printf("El carácter '%c' es alfabético\n", chara);
+		printf("El valor ASCII de '%c' es un valor de ASCII válido\n", chara);
 	}
 	else
 	{
-		printf("El carácter '%c' no es alfabético\n", chara);
+		printf("El valor ASCII de '%c' no es un valor de ASCII válido\n", chara);
 	}
 	return (0);
 }

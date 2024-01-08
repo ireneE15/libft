@@ -1,38 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 12:26:19 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/08 10:41:27 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/08 12:26:52 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isdigit(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if (c >= '0' && c <= '9')
+	{
 		return (1);
+	}
 	else
+	{
 		return (0);
+	}
 }
 /*
 int	main(void)
 {
-	char	chara;
+	int	chara;
 
 	chara = 'a';
-	if (ft_isalpha(chara))
+	if (ft_isdigit(chara))
 	{
-		printf("El carácter '%c' es alfabético\n", chara);
+		printf("El carácter '%c' es numérico\n", chara);
 	}
 	else
 	{
-		printf("El carácter '%c' no es alfabético\n", chara);
+		printf("El carácter '%c' no es numérico\n", chara);
 	}
 	return (0);
 }

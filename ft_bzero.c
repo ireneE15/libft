@@ -1,39 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 12:26:19 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/08 13:18:52 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/08 13:49:51 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(char c)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	size_t	count;
+
+	count = 0;
+	while (count < n)
+	{
+		((unsigned char *)s)[count] = 0;
+		count++;
+	}
 }
 /*
 int	main(void)
 {
-	char	chara;
+	char	mensaje[5] = "Hola";
+	size_t	bytes_a_cero;
 
-	chara = 'a';
-	if (ft_isalpha(chara))
-	{
-		printf("El carácter '%c' es alfabético\n", chara);
-	}
-	else
-	{
-		printf("El carácter '%c' no es alfabético\n", chara);
-	}
+	bytes_a_cero = 1;
+	printf("Antes de bzero: %s\n", mensaje);
+	ft_bzero(mensaje, bytes_a_cero);
+	printf("Después de bzero: %s\n", mensaje);
 	return (0);
 }
 */

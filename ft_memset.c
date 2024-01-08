@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/11 12:03:01 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/08 12:26:19 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/08 12:23:29 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/08 13:16:32 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isalpha(char c)
+void	*ft_memset(void *b, int c, size_t len)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return (1);
-	else
-		return (0);
+	size_t	count;
+
+	count = 0;
+	while (count < len)
+	{
+		((unsigned char *)b)[count] = (unsigned char)c;
+		count++;
+	}
+	return (b);
 }
 /*
 int	main(void)
 {
-	char	chara;
+	size_t	block_size;
+	char	buffer[10];
+	int		fill_value;
+	size_t	i;
 
-	chara = 'a';
-	if (ft_isalpha(chara))
+	block_size = 10;
+	fill_value = '!';
+	ft_memset(buffer, fill_value, block_size);
+	printf("Contenido del bloque de memoria: ");
+	i = 0;
+	while (i < block_size)
 	{
-		printf("El carácter '%c' es alfabético\n", chara);
+		printf("%c ", buffer[i]);
+		i++;
 	}
-	else
-	{
-		printf("El carácter '%c' no es alfabético\n", chara);
-	}
+	printf("\n");
 	return (0);
 }
 */
