@@ -6,11 +6,13 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:14:21 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/09 12:16:38 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/09 13:44:41 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
 #include <stdio.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
+*/

@@ -6,32 +6,58 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:44:30 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/09 12:16:30 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/09 13:45:28 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	i;
-	
+
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 	{
 		i++;
 	}
 	return (i);
 }
 
-size_t	ft_strlcat(const char *src, char *dest, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t	src_lon;
 	size_t	dest_lon;
-	size_t	total_lon;
+	size_t	src_lon;
+	size_t	i;
 
-	src_lon = strlen(src);
-	dest_lon = strlen(dest);
-	total_lon = src_lon + dest_lon
+	i = 0;
+	src_lon = ft_strlen(src);
+	dest_lon = ft_strlen(dest);
+	if (size == 0 || size <= dest_lon)
+	{
+		return (size + src_lon);
+	}
+	while (i < (size - dest_lon - 1) && src[i])
+	{
+		dest[dest_lon + i] = src[i];
+		i++;
+	}
+	dest[dest_lon + i] = '\0';
+	return (dest_lon + src_lon);
 }
+/*
+int main(void) 
+{
+    char destination[20] = "Hola, ";
+    const char *source = "Mundo!";
+    size_t destination_size = sizeof(destination);
+	
+    size_t result = ft_strlcat(destination, source, destination_size);
+
+    printf("Resultado: %s\n", destination);
+    printf("Longitud total: %zu\n", result);
+
+    return 0;
+}
+*/
