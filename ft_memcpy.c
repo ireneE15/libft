@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 13:53:32 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/09 10:29:44 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/09 10:36:53 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	const char	source[] = "Hola, mundo!";
@@ -42,3 +42,4 @@ int	main(void)
 	printf("Destination: %s\n", destination);
 	return (0);
 }
+*/
