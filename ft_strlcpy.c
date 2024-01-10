@@ -6,25 +6,13 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 10:42:13 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/09 11:35:04 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/10 14:35:32 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
-/*
-char	ft_strlen(const char *str)
-{
-	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-*/
 size_t	ft_strlcpy(const char *src, char *dest, size_t size)
 {
 	size_t	i;

@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:18:52 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:34:48 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/10 09:55:46 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/10 14:35:46 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_toupper(int c)
 {
-	size_t	count;
-
-	count = 0;
-	while (count < n)
+	if ((c >= 'a' && c <= 'z'))
 	{
-		((unsigned char *)s)[count] = 0;
-		count++;
+		return (c - 32);
+	}
+	else
+	{
+		return (c);
 	}
 }
 /*
 int	main(void)
 {
-	char	mensaje[5] = "Hola";
-	size_t	bytes_a_cero;
+	char	minu = 'a';
+	char	mayu = ft_toupper(minu);
 
-	bytes_a_cero = 1;
-	printf("Antes de bzero: %s\n", mensaje);
-	ft_bzero(mensaje, bytes_a_cero);
-	printf("Después de bzero: %s\n", mensaje);
+	printf("Letra original: %c\n", minu);
+	printf("Letra convertida a mayúscula: %c\n", mayu);
 	return (0);
 }
 */

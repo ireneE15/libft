@@ -1,39 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:18:52 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:34:48 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/10 13:51:00 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/10 14:35:26 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+char	*ft_strdup(char *src)
 {
-	size_t	count;
+	int		i;
+	char	*copy;
 
-	count = 0;
-	while (count < n)
+	i = 0;
+	copy = (char *)malloc(ft_strlen(src) + 1);
+	if (copy == NULL)
 	{
-		((unsigned char *)s)[count] = 0;
-		count++;
+		return (NULL);
 	}
+	while (src[i] != '\0')
+	{
+		copy[i] = src[i];
+		i++;
+	}
+	copy[i] = '\0';
+	return (copy);
 }
 /*
 int	main(void)
 {
-	char	mensaje[5] = "Hola";
-	size_t	bytes_a_cero;
+	char	string[] = "Hola";
+	char	*copia;
 
-	bytes_a_cero = 1;
-	printf("Antes de bzero: %s\n", mensaje);
-	ft_bzero(mensaje, bytes_a_cero);
-	printf("Después de bzero: %s\n", mensaje);
+	copia = ft_strdup(string);
+	printf("Original: %s\n", string);
+	ft_strdup(string);
+	printf("Copia: %s", copia);
+	free(copia);
 	return (0);
 }
 */

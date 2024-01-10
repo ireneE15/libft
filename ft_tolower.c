@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/08 13:18:52 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:34:48 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/10 10:11:07 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/10 14:35:43 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	ft_tolower(int c)
 {
-	size_t	count;
-
-	count = 0;
-	while (count < n)
+	if (c >= 'A' && c <= 'Z')
 	{
-		((unsigned char *)s)[count] = 0;
-		count++;
+		return (c + 32);
+	}
+	else
+	{
+		return (c);
 	}
 }
 /*
 int	main(void)
 {
-	char	mensaje[5] = "Hola";
-	size_t	bytes_a_cero;
+	char	mayu = 'a';
+	char	minu = ft_tolower(mayu);
 
-	bytes_a_cero = 1;
-	printf("Antes de bzero: %s\n", mensaje);
-	ft_bzero(mensaje, bytes_a_cero);
-	printf("Después de bzero: %s\n", mensaje);
+	printf("Letra original: %c\n", mayu);
+	printf("Letra convertida a minúscula: %c\n", minu);
 	return (0);
 }
 */

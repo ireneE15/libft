@@ -6,24 +6,12 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 11:44:30 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/09 13:45:28 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/10 14:35:29 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
-
-int	ft_strlen(const char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
