@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: irene <irene@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 11:30:08 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:34:54 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/10 16:34:22 by irene            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	ft_isalnum(char c)
 {
-	if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z' || c >= '0' && c <= '9')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9'))
 	{
 		return (1);
 	}
@@ -24,12 +24,12 @@ int	ft_isalnum(char c)
 		return (0);
 	}
 }
-/*
+
 int	main(void)
 {
 	int	chara;
 
-	chara = '%';
+	chara = '4';
 	if (ft_isalnum(chara))
 	{
 		printf("El carácter '%c' es alfanumérico\n", chara);
@@ -40,4 +40,3 @@ int	main(void)
 	}
 	return (0);
 }
-*/
