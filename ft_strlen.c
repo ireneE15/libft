@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: irene <irene@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 12:15:41 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:35:34 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/10 16:53:36 by irene            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-char	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
