@@ -6,13 +6,13 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:19:04 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:35:23 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/11 12:40:01 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-
+/*
 char	*ft_strchr(const char *str, int c)
 {
 	char	*s;
@@ -35,6 +35,21 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return (NULL);
 }
+*/
+
+char	*ft_strchr(const char *str, int c)
+{
+	while (*str != (char)c)
+	{
+		if (*str == '\0')
+		{
+			return (NULL);
+		}
+		str++;
+	}
+	return ((char *)str);
+}
+
 /*
 int main(void)
 {

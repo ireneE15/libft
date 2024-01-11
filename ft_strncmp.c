@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:02:23 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:35:37 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/11 10:40:43 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,26 @@
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	i = 0;
-	if (!(s1) || !(s2))
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	while ((str1[i] != '\0' || str2[i] != '\0') && (i < n))
 	{
-		return (0);
-	}
-	if (n == 0)
-	{
-		return (0);
-	}
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0' && ((i + 1) < n))
-	{
+		if (str1[i] < str2[i])
+		{
+			return (str1[i] - str2[i]);
+		}
+		else if (str1[i] > str2[i])
+		{
+			return (str1[i] - str2[i]);
+		}
 		i++;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }
 /*
 int main(void)

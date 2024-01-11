@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:14:21 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:35:16 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/11 11:57:39 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = dest;
 	s = src;
+	if ((dest == NULL && src == NULL) || n == 0)
+		return (dest);
 	if (d < s)
 	{
 		while (n--)

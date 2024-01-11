@@ -6,14 +6,14 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 11:59:48 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:35:05 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/11 11:33:42 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 	{
