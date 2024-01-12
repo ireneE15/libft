@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: irene <irene@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:12:36 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/11 13:02:53 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/12 17:18:57 by irene            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*str;
 	size_t				counter;
 
-	if ((const char)s == '\0' && s == NULL && n == 0)
+	if (/*(const char)s == '\0' && */s == NULL && n == 0)
 	{
 		return (NULL);
 	}
