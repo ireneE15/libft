@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/09 10:42:13 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/11 10:46:11 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/15 13:38:08 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 	if (size)
 	{
 		i = 0;
-		while (src[i] && i < size - 1)
+		while (i < size - 1 && src[i])
 		{
 			dest[i] = src[i];
 			i++;

@@ -6,36 +6,12 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 10:19:04 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/11 12:40:01 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/15 11:35:36 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
-/*
-char	*ft_strchr(const char *str, int c)
-{
-	char	*s;
-
-	s = (char *)str;
-	if (str)
-	{
-		while (*s)
-		{
-			if ((char)c == *s)
-			{
-				return (s);
-			}
-			s++;
-		}
-		if ((char)c == 0)
-		{
-			return (s);
-		}
-	}
-	return (NULL);
-}
-*/
 
 char	*ft_strchr(const char *str, int c)
 {

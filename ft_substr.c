@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 13:52:23 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/12 13:10:06 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/15 13:17:18 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	sub = (char *)malloc((len + 1) * sizeof(char));
 	if (!sub)
 	{
-		return (0);
+		return (NULL);
 	}
 	ft_strlcpy(sub, s + start, (len + 1));
 	return (sub);
 }
+
 /*
 int main(void)
 {
