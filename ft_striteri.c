@@ -1,44 +1,47 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/09 10:42:13 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/15 15:48:43 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/16 11:15:31 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/16 11:33:55 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	unsigned int	i;
+	int	i;
+	int	j;
 
-	if (size)
+	i = 0;
+	j = 0;
+	if (s != NULL && f != NULL)
 	{
-		i = 0;
-		while (i < size - 1 && src[i])
+		i = ft_strlen(s);
+		while (j < i)
 		{
-			dest[i] = src[i];
-			i++;
+			(*f)(j, s);
+			s++;
+			j++;
 		}
-		dest[i] = '\0';
 	}
-	return (ft_strlen(src));
 }
 /*
-int	main(void)
+void imprimir_caracter_con_indice(unsigned int indice, char *caracter)
 {
-	const char	*source = "Hola";
-	char		destination[20];
+    printf("Carácter en posición %u: %c\n", indice, *caracter);
+}
 
-	size_t		lon_cpy = ft_strlcpy(source, destination, sizeof(destination));
+int main(void)
+{
+    char cadena[] = "Hola";
 
-	printf("Source: %s\n", source);
-	printf("Destination: %s\n", destination);
-	printf("Copied Length: %zu\n", lon_cpy);
+    ft_striteri(cadena, imprimir_caracter_con_indice);
+    return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:47:29 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/15 13:32:20 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/16 09:58:39 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,8 @@ char	**ft_split(char const *s, char c)
 /*
 int main(void)
 {
-    const char *input_string = "Hola,mundo,esto,es,una,prueba";
-    char delimiter = ',';
+    const char *input_string = "^^^1^^2a,^^^^3^^^^--h^^^^";
+    char delimiter = '^';
     char **result = ft_split(input_string, delimiter);
     if (result == NULL) {
         fprintf(stderr, "Error al dividir la cadena\n");
@@ -82,7 +82,6 @@ int main(void)
         free(result[i]);
         i++;
     }
-    free(result);
     return (EXIT_SUCCESS);
 }
 */
