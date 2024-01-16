@@ -6,7 +6,7 @@
 #    By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 15:02:17 by iescalon          #+#    #+#              #
-#    Updated: 2024/01/16 13:04:59 by iescalon         ###   ########.fr        #
+#    Updated: 2024/01/16 14:25:36 by iescalon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,10 @@ SRCS			= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c 		\
 
 OBJS			= $(SRCS:.c=.o)
 
+BONUS			= ft_lstnew_bonus.c \
+
+BONUS_OBJS		= $(BONUS: .c=.o)
+
 CC				= @cc
 RM				= @rm -f
 CFLAGS			= -Wall -Wextra -Werror -ggdb -pedantic -I.
@@ -32,7 +36,7 @@ all:			$(NAME)
 $(NAME):		$(OBJS)
 				@ar rcs $(NAME) $(OBJS)
 
-$(OBJS): %.o: %.c
+$(OBJS) $(BONUS_OBJS): %.o: %.c
 				$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
@@ -43,4 +47,7 @@ fclean:			clean
 
 re:				fclean $(NAME)
 
-.PHONY:			all clean fclean
+bonus:			$(OBJS) $(BONUS_OBJS)
+				@ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+
+.PHONY:			all clean fclean re bonus
