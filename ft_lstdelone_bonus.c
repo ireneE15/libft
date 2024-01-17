@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 13:47:47 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/17 10:19:10 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/17 12:36:15 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/17 12:42:05 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,34 @@
 #include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list	*new_list;
-
-	new_list = (t_list *)malloc(sizeof(t_list));
-	if (!new_list)
+	if (lst && del)
 	{
-		return (NULL);
+		if (lst -> content)
+		{
+			del(lst -> content);
+		}
+		free (lst);
 	}
-	new_list -> content = content;
-	new_list -> next = NULL;
-	return (new_list);
 }
 /*
-int	main(void)
+static void del(void *content)
 {
-    t_list *list = ft_lstnew("Hola");
-    if (list != NULL)
-	{
-        printf("Contenido de la lista: %s\n", (char *)list->content);
-    }
-	else
-	{
-        printf("Fallo al crear la lista\n");
-    }
-    free(list);
+	free(content);
+}
+
+int main(void) 
+{
+    t_list *first = ft_lstnew((void *)1);
+    int *number = malloc(sizeof(int));
+
+    *number = 42; 
+    first->content = number;
+    first->next = NULL;
+	printf("Antes: %d\n", *(int*)first->content);
+    ft_lstdelone(first, del);
+	printf("Despues: %d\n", *(int*)first->content);
     return (0);
 }
 */

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 13:47:47 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/17 10:19:10 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/17 12:04:54 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/17 12:09:49 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,30 @@
 #include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*new_list;
-
-	new_list = (t_list *)malloc(sizeof(t_list));
-	if (!new_list)
+	if (lst)
 	{
-		return (NULL);
+		while (lst -> next != NULL)
+		{
+			lst = lst -> next;
+		}
 	}
-	new_list -> content = content;
-	new_list -> next = NULL;
-	return (new_list);
+	return (lst);
 }
 /*
 int	main(void)
 {
-    t_list *list = ft_lstnew("Hola");
-    if (list != NULL)
-	{
-        printf("Contenido de la lista: %s\n", (char *)list->content);
-    }
-	else
-	{
-        printf("Fallo al crear la lista\n");
-    }
-    free(list);
-    return (0);
+	t_list *first = ft_lstnew((void *)1);
+	t_list *second = ft_lstnew((void *)8);
+	t_list	*last;
+
+	first->next = second;
+	second->next = NULL;
+	last = ft_lstlast(first);
+	printf("%d\n", (int)last->content);
+	free(first);
+	free(second);
+	return (0);
 }
 */

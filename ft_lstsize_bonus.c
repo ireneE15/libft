@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/16 13:47:47 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/17 10:19:10 by iescalon         ###   ########.fr       */
+/*   Created: 2024/01/17 11:45:57 by iescalon          #+#    #+#             */
+/*   Updated: 2024/01/17 12:14:01 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,31 @@
 #include <stdlib.h>
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*new_list;
+	int	i;
 
-	new_list = (t_list *)malloc(sizeof(t_list));
-	if (!new_list)
+	i = 0;
+	while (lst != NULL)
 	{
-		return (NULL);
+		i++;
+		lst = lst -> next;
 	}
-	new_list -> content = content;
-	new_list -> next = NULL;
-	return (new_list);
+	return (i);
 }
 /*
 int	main(void)
 {
-    t_list *list = ft_lstnew("Hola");
-    if (list != NULL)
-	{
-        printf("Contenido de la lista: %s\n", (char *)list->content);
-    }
-	else
-	{
-        printf("Fallo al crear la lista\n");
-    }
-    free(list);
-    return (0);
+	t_list *first = ft_lstnew((void *)1);
+	t_list *second = ft_lstnew((void *)2);
+	int	size;
+
+	first->next = second;
+	second->next = NULL;
+	size = ft_lstsize(first);
+	printf("%d\n", size);
+	free(first);
+	free(second);
+	return (0);
 }
 */
