@@ -6,7 +6,7 @@
 #    By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 15:02:17 by iescalon          #+#    #+#              #
-#    Updated: 2024/01/17 13:13:02 by iescalon         ###   ########.fr        #
+#    Updated: 2024/01/18 10:33:49 by iescalon         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ OBJS			= $(SRCS:.c=.o)
 
 BONUS			= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 				ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-				ft_lstclear_bonus.c \
+				ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c \
 
 BONUS_OBJS		= $(BONUS:.c=.o)
 
