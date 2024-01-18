@@ -6,37 +6,13 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 11:29:02 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/11 11:09:53 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/18 11:37:35 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include "libft.h"
-/*
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
-{
-	char	*str1;
-	char	*str2;
-	size_t	counter;
 
-	str1 = (char *)s1;
-	str2 = (char *)s2;
-	if (!s1 || !s2)
-	{
-		return (0);
-	}
-	if (n == 0)
-	{
-		return (0);
-	}
-	counter = 0;
-	while ((str1[counter] == str2[counter]) && (counter + 1 < n))
-	{
-		counter++;
-	}
-	return ((str1[counter] - str2[counter]));
-}
-*/
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*p1 = s1;
