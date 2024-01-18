@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 14:14:21 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/11 11:57:39 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/18 11:40:13 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 }
 
 /*
-int main() {
+int main(void)
+{
     char source[] = "Hello, World!";
     char destination[20];
 
