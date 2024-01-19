@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:04:20 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/18 10:33:15 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/19 09:49:35 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,3 +39,40 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (new_list);
 }
+/*
+void	*double_content(void *content)
+{
+	int	*value;
+	int	*doubled;
+
+	value = (int *)content;
+	doubled = (int *)malloc(sizeof(int));
+	if (!doubled)
+		return (NULL);
+	*doubled = (*value) * 2;
+	return (doubled);
+}
+
+int	main(void)
+{
+	t_list	*lst = ft_lstnew((void *)malloc(sizeof(int)));
+	*((int *)lst->content) = 5;
+	ft_lstadd_back(&lst, ft_lstnew((void *)malloc(sizeof(int))));
+	*((int *)(lst->next->content)) = 10;
+	ft_lstadd_back(&lst, ft_lstnew((void *)malloc(sizeof(int))));
+	*((int *)(lst->next->next->content)) = 15;
+
+	t_list *mapped_list = ft_lstmap(lst, &double_content, &free);
+	while (mapped_list)
+	{
+		printf("%d\n", *((int *)mapped_list->content));
+		t_list *temp = mapped_list;
+		mapped_list = mapped_list->next;
+		free(temp->content);
+		free(temp);
+	}
+	ft_lstclear(&lst, &free);
+	ft_lstclear(&mapped_list, &free);
+	return (0);
+}
+*/
