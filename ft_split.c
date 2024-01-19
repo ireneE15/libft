@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 10:47:29 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/18 11:29:11 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/19 10:44:48 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,25 +83,27 @@ char	**ft_split(char const *s, char c)
 /*
 int main(void)
 {
-    const char *input_string = "^^^1^^2a,^^^^3^^^^--h^^^^";
-    char delimiter = '^';
-    char **result = ft_split(input_string, delimiter);
-    if (result == NULL) {
-        fprintf(stderr, "Error al dividir la cadena\n");
-        return EXIT_FAILURE;
-    }
-    int i = 0;
-    while (result[i] != NULL) 
-	{
-        printf("Palabra %d: %s\n", i + 1, result[i]);
-        i++;
-    }
+    char text[] = "Hola===!";
+    char delimitador = '=';
+    char **rdo;
+    int i;
+
     i = 0;
-    while (result[i] != NULL) 
-	{
-        free(result[i]);
-        i++;
+    rdo = ft_split(text, delimitador);
+    if (rdo)
+    {
+        printf("Cadena original: %s\n", text);
+        printf("Resultado: ");
+        while (rdo[i] != NULL)
+        {
+            printf("%s", rdo[i]);
+            i++;
+        }
+        printf("\n");
+        free(rdo);
     }
-    return (EXIT_SUCCESS);
+    else
+        printf("Fallo de memoria.\n");
+    return (0);
 }
 */
