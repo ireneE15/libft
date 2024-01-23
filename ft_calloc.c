@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:08:13 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/10 14:34:51 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/22 10:19:30 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_calloc(size_t count, size_t size)
 	memory = malloc(count * size);
 	if (memory == NULL)
 	{
-		return (0);
+		return (NULL);
 	}
 	while (i < count * size)
 	{
@@ -51,7 +51,6 @@ int main(void)
             printf("%d ", array[i]);
             i++;
         }
-
         free(array);
     }
 	else

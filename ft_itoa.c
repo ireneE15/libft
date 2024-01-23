@@ -6,7 +6,7 @@
 /*   By: iescalon <iescalon@student.42urduliz.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 13:41:47 by iescalon          #+#    #+#             */
-/*   Updated: 2024/01/16 10:28:03 by iescalon         ###   ########.fr       */
+/*   Updated: 2024/01/22 13:55:23 by iescalon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,10 @@ char	*ft_itoa(int n)
 		strnum[0] = '0';
 	while (nb > 0)
 	{
-		strnum[str_len - counter++ -1] = nb % 10 + '0';
+		strnum[str_len - counter++ -1] = nb % 10 + '0'; // str_len - counter++ - 1 determina la posición en la cadena 
+														// de caracteres donde se almacenará el dígito. Comienza desde 
+														// la última posición de la cadena (str_len - 1) y se va moviendo 
+														// hacia la primera posición.
 		nb = nb / 10;
 	}
 	return (strnum);
